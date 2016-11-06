@@ -1,0 +1,366 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Paragraph
+Problem
+\end_layout
+
+\begin_layout Standard
+Given a set 
+\begin_inset Formula $A=\{a_{1},a_{2},...a_{n}\}$
+\end_inset
+
+ of 
+\begin_inset Formula $n$
+\end_inset
+
+ integers how many non-zero unique subsets can be selected such that the
+ sum of the subset is even.
+ In the event a set contains two numbers which are the same, the numbers
+ will be considered independent and unique, such that if 
+\begin_inset Formula $a_{i}=a_{j}$
+\end_inset
+
+ then choosing 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ and choosing 
+\begin_inset Formula $a_{j}$
+\end_inset
+
+will be considered as different sets.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Decomposition
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\{\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A_{e}=$
+\end_inset
+
+ even elements only
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A_{eo}=$
+\end_inset
+
+ even number of odd elements only
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A_{oo}=$
+\end_inset
+
+ odd number of odd elements only
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A_{u}$
+\end_inset
+
+= 
+\begin_inset Formula $A_{e}\cup A_{eo}\cup A_{oo}$
+\end_inset
+
+ Generic case
+\end_layout
+
+\begin_layout Paragraph
+Math
+\end_layout
+
+\begin_layout Standard
+We will now consider each decomposition.
+ 
+\end_layout
+
+\begin_layout Enumerate
+In the event of 
+\begin_inset Formula $A=\{\}$
+\end_inset
+
+ the answer is 1.
+ 
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $A_{e}$
+\end_inset
+
+, let 
+\begin_inset Formula $C_{r}^{n}=\left(_{r}^{n}\right).$
+\end_inset
+
+Calculate 
+\begin_inset Formula $\sum_{r=1}^{n}\left(_{r}^{n}\right)=2^{n}-1$
+\end_inset
+
+ by the Bionomial Theorem.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Chong & Meng, Principles and Techniques in Combinatorics p.71, 2.3.1
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+For example, 
+\begin_inset Formula $A_{e}=\{2,4,6,8\}$
+\end_inset
+
+ produces the following combinations all 15 of which have even sums: 
+\begin_inset Formula 
+\begin{align*}
+\{2\},\{4\},\{6\},\{8\},\\
+\{2,4\},\{2,6\},\{2,8\},\{4,6\},\{4,8\},\{6,8\},\\
+\{2,4,6\},\{2,4,8\},\{2,6,8\},\{4,6,8\},\\
+\{2,4,6,8\}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula $\sum_{r=1}^{n}\left(_{r}^{n}\right)=2^{n}-1=2^{4}-1=16-1=15$
+\end_inset
+
+.
+ There are 15 possible subsets.
+ 
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $A_{eo}$
+\end_inset
+
+, each subset of even length produces an even sum.
+\begin_inset Newline newline
+\end_inset
+
+For example, 
+\begin_inset Formula $A_{eo}=\{1,3,5,7\}$
+\end_inset
+
+produces the following combinations of which 7 have even sums: 
+\begin_inset Formula 
+\begin{align*}
+\{1\},\{3\},\{5\},\{7\}, & =C_{1}^{4}\\
+\{1,3\},\{1,5\},\{1,7\},\{3,5\},\{3,7\},\{5,7\}, & =C_{2}^{4}\\
+\{1,3,5\},\{1,3,7\},\{1,5,7\},\{3,5,8\}, & =C_{3}^{4}\\
+\{1,3,5,7\} & =C_{4}^{4}
+\end{align*}
+
+\end_inset
+
+ For 
+\begin_inset Formula $A_{eo}$
+\end_inset
+
+ with 
+\begin_inset Formula $\vert A_{eo}\vert$
+\end_inset
+
+ is even, the number of even non-empty subsets is calculated by 
+\begin_inset Formula $\sum_{r=1}^{n}\left(_{r}^{n}\right)-1,r\in\{2,4,6\ldots,n\}=2^{n-1}-1=2^{4-1}-1=7$
+\end_inset
+
+ by combinatorial identity
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Chong & Meng, p.72 2.2.3
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $A_{oo}$
+\end_inset
+
+, still each subset of even length produces and even sum.
+ 
+\begin_inset Newline newline
+\end_inset
+
+For example, 
+\begin_inset Formula $A_{oo}=\{1,3,5\}$
+\end_inset
+
+produces the following combinations of which 3 have even sums: 
+\begin_inset Formula 
+\begin{align*}
+\{1\},\{3\},\{5\} & =C_{1}^{3}\\
+\{1,3\},\{1,5\},\{3,5\} & =C_{2}^{3}\\
+\{1,3,5\} & =C_{3}^{3}
+\end{align*}
+
+\end_inset
+
+It follows that in the event of an odd number of odd elements, 
+\begin_inset Formula $2^{n-1}-1=2^{3-1}-1=3$
+\end_inset
+
+ is the same result as 
+\begin_inset Formula $A_{eo}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For the generic case consider 
+\begin_inset Formula $A_{e}\cup A_{eo}$
+\end_inset
+
+ and by the multiplication principle 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Chong & Meng, p.3 
+\end_layout
+
+\end_inset
+
+ the number of even sets is 
+\begin_inset Formula $(2^{n}-1)(2^{n-1}-1).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solution
+\end_layout
+
+\begin_layout Standard
+Given a set 
+\begin_inset Formula $A=\{a_{1},a_{2},...a_{n}\}$
+\end_inset
+
+ the number of even non-empty subsets is computed by counting the number
+ of even 
+\begin_inset Formula $a$
+\end_inset
+
+, call 
+\begin_inset Formula $e$
+\end_inset
+
+ and the number of odd 
+\begin_inset Formula $a$
+\end_inset
+
+, call 
+\begin_inset Formula $o$
+\end_inset
+
+, computing the combinations as per above, and multiplying.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+(2^{e}-1)(2^{o-1}-1)\blacksquare\\
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
