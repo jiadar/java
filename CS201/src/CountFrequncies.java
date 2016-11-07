@@ -1,15 +1,5 @@
-package exercise5;
-
-/*
-    Author:
-    Date: 10/05/2016
-    Assignment: Exercise 5_2
-*/
-
-public class Exercise5_2
-{      
-    public static void main(String[] args)
-  {
+public class CountFrequncies {      
+    public static void main(String[] args) {
     // Initialization
     final int ARRAY_SIZE = 20;
     int n = ARRAY_SIZE;

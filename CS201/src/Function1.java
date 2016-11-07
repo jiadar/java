@@ -19,7 +19,7 @@ public class Function1
     {
         int num = 5, pow = 2;
         System.out.println(num + "^" + pow + " == " + power(num,pow));
-        System.out.println(evaluate(3.76));
+        System.out.println(evaluate(3.1415));
     }
   
     // power function: Calculate x^n, return result
@@ -40,7 +40,7 @@ public class Function1
     
     private static double evaluate(double x) {
       // 20x^4 - 12x^3 - 3x^2 + 15x + 3
-      return (20*power(x,4) - 12*power(x,3) - 3*power(x,2) + 3); 
+      return (20*power(x,4) - 12*power(x,3) - 3*power(x,2) + 15*x + 3); 
     }
 }
 

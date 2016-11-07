@@ -1,1 +1,11 @@
 /bin/
+../.DS_Store
+../.project
+../CS201/.classpath
+../CS201/.gitignore
+src/.project
+src/input
+src/scratch
+tex/#*#
+tex/*~
+.gitignore

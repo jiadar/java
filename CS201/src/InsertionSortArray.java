@@ -14,17 +14,10 @@ public class InsertionSortArray {
     System.out.println();
   }
   
-  public static void is(String msg, int[] n, int a, int b, int c) {
-    int i, j, temp;
-    for(i=0; i<n.length; i++) {
-      j=i;
-      while (j>0 && n[j-1]>n[j]) {
-        temp=n[j];
-        n[j]=n[j-1];
-        n[j-1]=temp;
-        j--;
-      }
-    }
+  public static void is(String msg, int[] A, int a, int b, int c) {
+
+    // BRIAN TO FILL IN THIS METHOD TO SORT ARRAY OF INTEGERS A
+    
   }
 
   public static void main(String[] args) {

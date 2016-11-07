@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class PictureArray {
 
-  public static void main(String[] args){
+  public static void main(String[] args) {
 
     int length = 4;
 
