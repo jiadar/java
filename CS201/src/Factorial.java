@@ -63,7 +63,7 @@ public class Factorial {
   }
 
   public static void main(String[] args) {
-    long f=142; // the upper bound on the double data type
+    long f=200; // the upper bound on the double data type
     System.out.println(f);
     System.out.println("Using a bigint: " + fact_big_int(BigInteger.valueOf(f)));
     System.out.println("The first 9 digits with double are " + (fact_double(f) < 1 ? "Error" : fact_double(f)) );
